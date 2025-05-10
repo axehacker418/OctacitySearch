@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="regis.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error === 'password_mismatch') {
+                alert("You entered a wrong confirmation password. Please enter correctly.");
+            }
+            if (error === 'email_used') {
+                alert("You entered an email that is already used. Please enter a unique email and try again.");
+            }
+
+            const ctnm = urlParams.get('ctnm');
+            if (!ctnm) {
+                alert("ctnm is null");
+                window.location.href = "index.html"; // Redirect if ctnm is missing
+            } else {
+                document.getElementById('ctnm').value = ctnm; // Set the hidden field value
+            }
+        };
+    </script>
+</head>
+<body>
+    <header class="text-center my-4">
+        <h1>User Registration</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="myForm" method="post" action="AdminReg.jsp" class="form-container shadow-lg p-5 rounded">
+                        <input type="hidden" id="ctnm" name="ctnm"> <!-- Hidden input field for ctnm -->
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="abc@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="con">Contact No.</label>
+                            <input type="tel" id="con" name="Contact" class="form-control" placeholder="XXXXXXXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Create Password</label>
+                            <input type="password" id="pass" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass1">Confirm Password</label>
+                            <input type="password" id="pass1" name="Cpassword" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button id="Submit" class="btn btn-primary btn-block" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

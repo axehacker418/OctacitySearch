@@ -1,0 +1,71 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: white;
+    background-image: url("image7.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Container Styling */
+form {
+    background-image: url("image6.jpg");
+    background-size: cover;
+    position: relative;
+    top: 5vh;
+    left: 35vw;
+    font-size: 16px; /* Base font size */
+    background-size: cover;
+    height: auto; /* Adjusted to auto */
+    max-width: 400px; /* Max width to control size */
+    padding: 20px;
+    margin-left: 10px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid blue;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styling */
+input {
+    width: calc(100% - 20px); /* Adjusted width */
+    padding: 10px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Base font size */
+}
+
+/* Label Styling */
+label {
+    color: rgb(243, 243, 7);
+    text-decoration: double;
+    font-size: 16px; /* Base font size */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Button Styling */
+button {
+    color: white;
+    background-color: blue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Base font size */
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: darkblue;
+}

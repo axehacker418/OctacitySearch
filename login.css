@@ -1,0 +1,84 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-image: url("image12.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Container */
+form {
+    background-color: rgba(240, 240, 240, 0.9); /* Slight transparency */
+    width: 300px; /* Fixed width for form */
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Styling */
+input {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Label Styling */
+label {
+    color: rgb(5, 199, 11);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Link Styling */
+#reglink {
+    color: rgb(215, 25, 25);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #11cfa3;
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Anchor Styling */
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    form {
+        width: 80%; /* Responsive width */
+    }
+}

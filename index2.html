@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>Saurabh.in</b></h1>
+        <nav>
+            <a class="abccc" href="login.html">Login</a>
+            <a class="abccc" href="#">Ops</a>
+            <a class="abccc" href="logout.jsp">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container mt-5">
+            <form id="cityForm">
+                <div class="mb-3">
+                    <label for="cityDropdown" class="form-label">Select City</label>
+                    <select id="cityDropdown" class="form-select" onchange="populateServices()">
+                        <option value="" selected>Select a city</option>
+                        <option value="Gwalior">Gwalior</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Bhind">Bhind</option>
+                        <option value="Morena">Morena</option>
+                        <option value="Jhanshi">Jhanshi</option>
+                        <option value="Guna">Guna</option>
+                        <option value="Aagra">Aagra</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="servicesDropdown" class="form-label">Select Service</label>
+                    <select id="servicesDropdown" class="form-select">
+                        <option value="" selected>Select a service</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p class="copyright">&copy; Saurabh.in</p>
+        <hr>
+        <p class="copyright">Contact: saurabhlakshkar321@gmail.com</p>
+        <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.3/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
+                        <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+                        <li class="mb-2">Currently v5.3.3.</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/">Home</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/">Docs</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/examples/">Examples</a></li>
+                        <li class="mb-2"><a href="https://icons.getbootstrap.com/">Icons</a></li>
+                        <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
+                        <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+                        <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Swag Store</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Guides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
+                        <li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Projects</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Icons</a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Examples repo</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Issues</a></li>
+                        <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Discussions</a></li>
+                        <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Corporate sponsors</a></li>
+                        <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index2.js"></script>
+
+    <script src="index1.js"></script>
+    <!-- <script>
+        function populateServices() {
+            const cityDropdown = document.getElementById('cityDropdown');
+            const selectedCity = cityDropdown.value;
+            const servicesDropdown = document.getElementById('servicesDropdown');
+    
+            if (!selectedCity) {
+                // Clear existing options if no city is selected
+                servicesDropdown.innerHTML = '<option value="" selected>Select a service</option>';
+                return;
+            }
+    
+            // Create an XMLHttpRequest object
+            const xhr = new XMLHttpRequest();
+    
+            // Define the callback function
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    try {
+                        const data = JSON.parse(xhr.responseText);
+    
+                        // Clear existing options
+                        servicesDropdown.innerHTML = '';
+    
+                        // Populate services dropdown with fetched data
+                        if (data && data.services && data.services.length > 0) {
+                            data.services.forEach(service => {
+                                const option = document.createElement('option');
+                                option.value = service;
+                                option.textContent = service;
+                                servicesDropdown.appendChild(option);
+                            });
+                        } else {
+                            // If no services available, show a default message
+                            const option = document.createElement('option');
+                            option.value = '';
+                            option.textContent = 'No services available';
+                            servicesDropdown.appendChild(option);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing JSON:', error);
+                    }
+                } else if (xhr.readyState === 4) {
+                    console.error('Error fetching services:', xhr.status, xhr.statusText);
+                }
+            };
+    
+            // Open a GET request
+            xhr.open('GET', 'search.jsp?city=' + encodeURIComponent(selectedCity), true);
+    
+            // Send the request
+            xhr.send();
+        }
+    </script> -->
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>Saurabh.in</b></h1>
+        <nav>
+            <a class="abccc" href="login.html">Login</a>
+            <a class="abccc" href="#">Ops</a>
+            <a class="abccc" href="logout.jsp">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container mt-5">
+            <form id="cityForm">
+                <div class="mb-3">
+                    <label for="cityDropdown" class="form-label">Select City</label>
+                    <select id="cityDropdown" class="form-select" onchange="populateServices()">
+                        <option value="" selected>Select a city</option>
+                        <option value="Gwalior">Gwalior</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Bhind">Bhind</option>
+                        <option value="Morena">Morena</option>
+                        <option value="Jhanshi">Jhanshi</option>
+                        <option value="Guna">Guna</option>
+                        <option value="Aagra">Aagra</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="servicesDropdown" class="form-label">Select Service</label>
+                    <select id="servicesDropdown" class="form-select">
+                        <option value="" selected>Select a service</option>
+                    </select>
+                </div>
+                
+                <br>
+                
+                <div class="mb-3">
+                    <label for="locationsDropdown" class="form-label">Select Location</label>
+                    <select id="locationsDropdown" class="form-select">
+                        <option value="" selected>Select a location</option>
+                    </select>
+                </div>
+                
+                <br>
+                <div class="mb-3">
+                    <label for="providersTable" class="form-label">Provider Details</label>
+                    <table id="providersTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="providersTableBody">
+                            <!-- Populate provider details here -->
+                        </tbody>
+                    </table>
+                </div>
+               
+
+
+
+            </form>
+        </div>
+    </main>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index1.js"></script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>Saurabh.in</b></h1>
+        <nav>
+            <a class="abccc" href="login.html">Login</a>
+            <a class="abccc" href="#">Ops</a>
+            <a class="abccc" href="logout.jsp">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container mt-5">
+            <form id="cityForm">
+                <div class="mb-3">
+                    <label for="cityDropdown" class="form-label">Select City</label>
+                    <select id="cityDropdown" class="form-select" onchange="populateServices()">
+                        <option value="" selected>Select a city</option>
+                        <option value="Gwalior">Gwalior</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Bhind">Bhind</option>
+                        <option value="Morena">Morena</option>
+                        <option value="Jhanshi">Jhanshi</option>
+                        <option value="Guna">Guna</option>
+                        <option value="Aagra">Aagra</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="servicesDropdown" class="form-label">Select Service</label>
+                    <select id="servicesDropdown" class="form-select">
+                        <option value="" selected>Select a service</option>
+                    </select>
+                </div>
+                
+                <br>
+                
+                <div class="mb-3">
+                    <label for="locationsDropdown" class="form-label">Select Location</label>
+                    <select id="locationsDropdown" class="form-select">
+                        <option value="" selected>Select a location</option>
+                    </select>
+                </div>
+                
+                <br>
+                <div class="mb-3">
+                    <label for="providersTable" class="form-label">Provider Details</label>
+                    <table id="providersTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="providersTableBody">
+                            <!-- Populate provider details here -->
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index1.js"></script>
+    <script>
+        // Retrieve the sid value from the session and embed it in JavaScript
+        //const sid =session.getAttribute("sid");
+        const urlParams = new URLSearchParams(window.location.search);
+            const ctnm = urlParams.get('ctnm');
+            alert(ctnm);
+
+
+        window.onload = function() {
+            if (!ctnm) {
+                // Redirect to index.html if session ID doesn't exist
+                alert("ctnm is null");
+                // window.location.href = "index.html"; // Uncomment to redirect
+            } else {
+                // Session exists, proceed with populating services dropdown
+                alert("ctnm: " + ctnm);
+               // populateServices();
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>Saurabh.in</b></h1>
+        <nav>
+            <a class="abccc" href="login.html">Login</a>
+            <a class="abccc" href="#">Ops</a>
+            <a class="abccc" href="logout.jsp">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container mt-5">
+            <form id="cityForm">
+                <div class="tableid">
+                <div class="mb-3">
+                    <label for="cityDropdown" class="form-label">Select City</label>
+                    <select id="cityDropdown" class="form-select" onchange="populateServices()">
+                        <option value="" selected>Select a city</option>
+                        <option value="Gwalior">Gwalior</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Bhind">Bhind</option>
+                        <option value="Morena">Morena</option>
+                        <option value="Jhanshi">Jhanshi</option>
+                        <option value="Guna">Guna</option>
+                        <option value="Aagra">Aagra</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="servicesDropdown" class="form-label">Select Service</label>
+                    <select id="servicesDropdown" class="form-select">
+                        <option value="" selected>Select a service</option>
+                    </select>
+                </div>
+                
+                <br>
+                
+                <div class="mb-3">
+                    <label for="locationsDropdown" class="form-label">Select Location</label>
+                    <select id="locationsDropdown" class="form-select">
+                        <option value="" selected>Select a location</option>
+                    </select>
+                </div>
+                
+                <br>
+            </div>
+              <div class="tableid">
+                <div class="mb-3">
+                    <label for="providersTable" class="form-label">Provider Details</label>
+                    <table id="providersTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody id="providersTableBody">
+                            <!-- Populate provider details here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+            </form>
+        </div>
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="index1.js"></script>
+
+    
+</body>
+</html>
+
+
+
+
+
+
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    height: 8vh;
+    width: 100vw;
+    background-color: rgb(191, 203, 160);
+    padding: 1px;
+    position: fixed;
+    top: 0;
+    border: 4px solid rgb(184, 78, 28);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+#logo {
+    color: #2F4F4F;
+    font-size: 4vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
+/* Navigation Styling */
+nav {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* City Form Styling */
+#cityForm {
+    display: inline-block;
+    margin: 50px;
+    text-align: center;
+}
+
+/* Table Styling */
+.tableid {
+    display: inline-block;
+    border: 2px solid blue;
+    border-radius: 1px;
+    width: auto;
+    height: auto;
+    background-color: aqua;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.295);
+    color: rgb(21, 140, 195);
+    height: 40vh;
+    width: 100vw;
+    position: static;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .frame > div {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+@media (min-width: 768px) {
+    .py-md-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 0;
+    }
+}
+
+.py-4 {
+    padding-top: 0 !important; 
+    padding-bottom: 0;
+}

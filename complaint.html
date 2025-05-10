@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2>Complaint Form</h2>
+        <form id="complaintForm" action="comp.jsp" method="post">
+            <!-- User ID field -->
+            <div class="form-group">
+                <label for="uid">User ID</label>
+                <input type="number" class="form-control" id="uid" name="uid" required>
+            </div>
+
+            <!-- Officer selection -->
+            <div class="form-group">
+                <label for="officer">Select Officer/Authority</label>
+                <select id="officer" name="officer" class="form-control" required>
+                    <option value="Officer A">Officer A</option>
+                    <option value="Officer B">Officer B</option>
+                    <option value="Officer C">Officer C</option>
+                    <option value="Officer D">Officer D</option>
+                </select>
+            </div>
+
+            <!-- Complaint Objective -->
+            <div class="form-group">
+                <label for="objective">Objective</label>
+                <input type="text" class="form-control" id="objective" name="objective" required>
+            </div>
+
+            <!-- Complaint Message -->
+            <div class="form-group">
+                <label for="complaintDetails">Complaint Message</label>
+                <textarea class="form-control" id="complaintDetails" name="complaintDetails" rows="5" required></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Submit Complaint</button>
+        </form>
+    </div>
+</body>
+</html>

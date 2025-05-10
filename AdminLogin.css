@@ -1,0 +1,65 @@
+/* Body Styling */
+body {
+    background-image: url("image9.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Softer shadow */
+}
+
+/* Image Styling */
+.img-fluid {
+    max-height: 250px;
+    max-width: 250px;
+    object-fit: cover;
+    border: 5px solid #f8f9fa;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Card Body Styling */
+.card-body {
+    padding: 2rem;
+}
+
+/* Form Styling */
+.form-control {
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: #80bdff;
+}
+
+.btn-primary {
+    border-radius: 20px;
+    background-color: #007bff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.8);
+}
+
+.btn-primary:active {
+    background-color: #004085;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 1);
+}

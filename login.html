@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="login.css" rel="stylesheet">
+    <title>Login Form</title>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error === 'Invalid_password') {
+                alert("you enterd an Wrong username password : Try Again");
+            }
+        };
+    </script>
+ 
+</head>
+<body>
+
+    <main>
+        <form id="myForm"   method="post" action="login.jsp">
+
+               <div>
+                <label for="name"><b>EmaiID</b> </label>
+                <br>                    
+                <input type="email" id="username" name="username" placeholder="abc@yahoo.com" >
+                <br> 
+                <hr>
+                <label for="password"><b>PASSWORD</b></label>
+                <br>
+                <input type="password" id="PASSWORD" name="PASSWORD" placeholder="sAURabh@017">
+                <br>
+                <button id="Submit">Submit</button>  
+               <p><b>New Costumer ? </b><a id="reglink" href="regis.html">register</a> </p> 
+                
+               </div> 
+
+        </form>
+        
+    </main>
+
+    <script>
+         setTimeout(function() {
+            window.location.href = 'logout.jsp';
+        }, 180000); // 180 seconds = 3 minutes
+    </script>
+
+</body>
+</html>
+
+
+
+
+

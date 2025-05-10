@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>OctaCitySearch.com</b></h1>
+        <nav>
+            <button class="abccc" type="button" class="service" onclick="setCityName('Search')">Search</button>
+
+            <!-- Updated anchor tag with target="_blank" for opening in new tab -->
+            <!-- <a class="abccc" href="AdminLogin.html" target="_blank">Admin Login</a> -->
+            <a class="abccc" href="logout.jsp">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <form id="formbody" method="post">
+            <div class="frame">
+                <div id="image1">
+                    <button type="button" class="service" onclick="setCityName('Gwalior')">Gwalior</button> 
+                </div>
+                <div id="image2">
+                    <button type="button" class="service" onclick="setCityName('Bhind')">Bhind</button> 
+                </div>
+                <div id="image3">
+                    <button type="button" class="service" onclick="setCityName('Jhanshi')">Jhanshi</button> 
+                </div>
+                <div id="image4">
+                    <button type="button" class="service" onclick="setCityName('Bhopal')">Bhopal</button> 
+                </div>
+                <div id="image5">
+                    <button type="button" class="service" onclick="setCityName('Indore')">Indore</button> 
+                </div>
+                <div id="image6">
+                    <button type="button" class="service" onclick="setCityName('Aagra')">Aagra</button> 
+                </div>
+                <div id="image7">
+                    <button type="button" class="service" onclick="setCityName('Morena')">Morena</button> 
+                </div>
+                <div id="image8">
+                    <button type="button" class="service" onclick="setCityName('Guna')">Guna</button> 
+                </div>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <p class="copyright">&copy;OctaCitySearch.com 2024</p>
+        <p class="copyright">Contact: saurabhlakshkar321@gmail.com</p>
+    </footer>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const ctnm = urlParams.get('ctnm');
+
+        window.onload = function() {
+            if (!ctnm) {
+                alert("ctnm is null");
+                window.location.href = "index.html"; // Redirect if session ID is missing
+            } else {
+                // Session exists, proceed with any additional logic
+            }
+        };
+
+        function setCityName(cityName) {
+            window.location.href = `index1.html?ctnm=${encodeURIComponent(ctnm)}&cnm=${encodeURIComponent(cityName)}`;
+        }
+
+       setTimeout(function() {
+            window.location.href = 'logout.jsp';
+        }, 180000); // 180 seconds = 3 minutes
+    </script>
+</body>
+</html>

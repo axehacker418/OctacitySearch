@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo"><b>OctaCitySearch.com</b></h1>
+        <nav>
+            <a class="abccc" href="login.html"> User Login</a>
+            <a class="abccc" href="regis.html">Register</a>
+            <a class="abccc" href="AdminLogin.html"><span style="color: red;">⚠</span> Admin Login</a>
+        </nav>
+    </header>
+    
+    <main>
+        <form id="formbody" action="login.html">
+            <div class="frame">
+                <div id="image1">
+                    <button type="submit" class="service" onclick="setCityName('Gwalior')">Gwalior</button> 
+                </div>
+                <div id="image2">
+                    <button type="submit" class="service" onclick="setCityName('Bhind')">Bhind</button> 
+                </div>
+                <div id="image3">
+                    <button type="submit" class="service" onclick="setCityName('Jhanshi')">Jhanshi</button> 
+                </div>
+                <div id="image4">
+                    <button type="submit" class="service" onclick="setCityName('Bhopal')">Bhopal</button> 
+                </div>
+                <div id="image5">
+                    <button type="submit" class="service" onclick="setCityName('Indore')">Indore</button> 
+                </div>
+                <div id="image6">
+                    <button type="submit" class="service" onclick="setCityName('Aagra')">Aagra</button> 
+                </div>
+                <div id="image7">
+                    <button type="submit" class="service" onclick="setCityName('Morena')">Morena</button> 
+                </div>
+                <div id="image8">
+                    <button type="submit" class="service" onclick="setCityName('Guna')">Guna</button> 
+                </div>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <p class="copyright">&copy; OctaCitySearch.com 2024</p>
+        <br>
+        <p class="copyright">Contact: saurabhlakshkar321@gmail.com</p>
+    </footer>
+    <!-- <a href="logout.jsp"></a> -->
+     <script>
+         setTimeout(function() {
+            window.location.href = 'logout.jsp';
+        }, 180000); // 180 seconds = 3 minutes
+     </script>
+   
+</body>
+</html>
